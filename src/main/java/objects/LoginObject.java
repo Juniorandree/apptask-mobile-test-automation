@@ -37,19 +37,20 @@ public class LoginObject {
     @AndroidFindBy(id = "drawer_layout")
     private AndroidElement winPuntoVisita;
 
-    public void writeLicencia() {
-        wait.until(ExpectedConditions.visibilityOf(txtLicencia)).click();}
-/*
-    public void writePlaca(String placa) {
+    public void ingresarLicencia(String licencia) {
+        wait.until(ExpectedConditions.visibilityOf(txtLicencia)).sendKeys(licencia);}
+
+    public void ingresarPlaca(String placa) {
         wait.until(ExpectedConditions.visibilityOf(txtPlaca)).sendKeys(placa);}
 
-    public void writePassword(String password) {
-        wait.until(ExpectedConditions.visibilityOf(txtPassword)).sendKeys(password);}
+    public void ingresarContrasenha(String contrasenha) {
+        wait.until(ExpectedConditions.visibilityOf(txtPassword)).sendKeys(contrasenha);}
 
-    public void touchIngresar() {
+    public void tocarInicioSesion() {
         wait.until(ExpectedConditions.visibilityOf(btnIngresar)).click();}
 
-    public String getPuntoVisita(){return wait.until(ExpectedConditions.visibilityOf(winPuntoVisita)).getText();}
-    */
+    public void mostrarPuntoVisita(){
+        wait.until(ExpectedConditions.visibilityOf(winPuntoVisita)).getText();}
+
 
 }

@@ -8,6 +8,8 @@
     <parameter name="automationName" value="UiAutomator2" />
     <parameter name="appPackage" value="pe.com.comsatel.tracingtasks" />
     <parameter name="appActivity" value="com.comsatel.tracingtasks.view.activity.LoginActivity" />
+    <parameter name="autoGrantPermissions" value="true" />
+    <parameter name="noReset" value="true" />
     <parameter name="url" value="http://127.0.0.1:4723/wd/hub" />
     <test name="login">
         <classes>

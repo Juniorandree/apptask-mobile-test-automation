@@ -29,10 +29,10 @@ public class TestRunner {
 
         private AndroidDriver<AndroidElement> driver;
 
-        @Parameters({"deviceName", "version", "platformName", "automationName" , "appPackage" , "appActivity", "url"})
+        @Parameters({"deviceName", "version", "platformName", "automationName" , "appPackage" , "appActivity", "autoGrantPermissions", "noReset", "url"})
         @BeforeClass(alwaysRun = true)
         public void setUpClass(String deviceName, String version, String platformName, String automationName,
-                               String appPackage, String appActivity, String url) throws Exception {
+                               String appPackage, String appActivity, String autoGrantPermissions, String noReset, String url) throws Exception {
                 DesiredCapabilities capabilities = new DesiredCapabilities();
                 capabilities.setCapability("deviceName", deviceName);
                 capabilities.setCapability(CapabilityType.VERSION, version);
@@ -40,6 +40,8 @@ public class TestRunner {
                 capabilities.setCapability("automationName", automationName);
                 capabilities.setCapability("appPackage", appPackage);
                 capabilities.setCapability("appActivity", appActivity);
+                capabilities.setCapability("autoGrantPermissions", autoGrantPermissions);
+                capabilities.setCapability("noReset", noReset);
                 driver = new AndroidDriver<>(new URL(url), capabilities);
                 AndroidDriverManager.setDriver(driver);
                 testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
