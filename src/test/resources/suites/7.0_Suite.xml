@@ -3,7 +3,7 @@
 <suite name="Suite" parallel="false">
 
     <parameter name="deviceName" value="emulator-5554" />
-    <parameter name="version" value="7.0" />
+    <parameter name="version" value="11.0" />
     <parameter name="platformName" value="Android" />
     <parameter name="automationName" value="UiAutomator2" />
     <parameter name="appPackage" value="pe.com.comsatel.tracingtasks" />
