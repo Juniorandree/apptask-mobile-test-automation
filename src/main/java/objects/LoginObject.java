@@ -21,6 +21,8 @@ public class LoginObject {
        wait = new WebDriverWait(this.driver, 20);
    }
 
+    @AndroidFindBy(id = "android:id/content")
+    private AndroidElement layoutInicioSesion;
 
     @AndroidFindBy(id = "txt_licencia")
     private AndroidElement txtLicencia;
@@ -52,5 +54,6 @@ public class LoginObject {
     public void mostrarPuntoVisita(){
         wait.until(ExpectedConditions.visibilityOf(winPuntoVisita)).getText();}
 
-
+    public void mostrarInicioSesion(){
+        wait.until(ExpectedConditions.visibilityOf(layoutInicioSesion));}
 }

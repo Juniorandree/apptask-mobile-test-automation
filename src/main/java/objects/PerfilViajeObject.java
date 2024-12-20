@@ -19,8 +19,6 @@ public class PerfilViajeObject {
         wait = new WebDriverWait(this.driver, 20);
     }
 
-    @AndroidFindBy(id = "//android.widget.ImageButton[@content-desc=\"Abrir el cajón de navegación\"]")
-    private AndroidElement btnViajes;
 
     @AndroidFindBy(id = "txt_licencia")
     private AndroidElement txtLicencia;

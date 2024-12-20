@@ -1,8 +1,5 @@
-@login
+@test
 Feature: Registro de usuario
-  #En este feature realizaremos
-  #el proceso de logueo de forma satisfactoria
-  #hacia el aplicativo smart tracing task
 
   Scenario: Logueo de forma correcta
     Given transportista ingresa licencia "TAI100" placa "TAI100" contraseña "PRUE1"

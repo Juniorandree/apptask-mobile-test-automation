@@ -10,13 +10,13 @@ import org.testng.annotations.*;
 import java.net.URL;
 
 @CucumberOptions (
-        features = "src/test/resources",
+        features = {"src/test/resources"},
         glue = {"steps"},
-        tags = {"@login"},
-        format = {
+        // tags = {"@login"},
+        tags = {"~@Ignore"},
+        plugin = {
                 "pretty",
-                "html:target/cucumber-reports/cucumber-pretty",
-                "json:target/cucumber-reports/CucumberTestReport.json",
+                "json:target/cucumber-reports/cucumber.json",
                 "rerun:target/cucumber-reports/rerun.txt"
         })
 
